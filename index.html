@@ -18,30 +18,55 @@
       
     }
     .images-conatainer{
-        height: 200px;
-        width: 200px;
+        display: flex;
+        justify-content: center;
+        
     }
     .Product-img{
         height: 100px;
         width: 100px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 10px;
+        cursor: pointer;
+        
     }
 </style>
 <body>
+   
     <img src="laptop.avif" id="main-img"/>
+    
+
 
     <div class="images-conatainer">
       
-   
-        <img src="laptop1-removebg-preview.png" class="Product-img"/>
-        <img src="laptop2-removebg-preview.png" class="Product-img"/>
-        <img src="laptop3-removebg-preview.png" class="Product-img"/>
-        <img src="laptop4-removebg-preview.png" class="Product-img"/>
+        <img src="laptop.avif" class="Product-img" onclick="changeImage(1)"/>
+        <img src="laptop1-removebg-preview.png" class="Product-img" onclick="changeImage(2)"/>
+        <img src="laptop2-removebg-preview.png" class="Product-img" onclick="changeImage(3)"/>
+        <img src="laptop3-removebg-preview.png" class="Product-img" onclick="changeImage(4)"/>
+        <img src="laptop4-removebg-preview.png" class="Product-img" onclick="changeImage(5)"/>
 
-
-    
     </div>
 
-
+<script>
+        
+     function changeImage(num){
+        const mainImage = document.getElementById('main-img');
+        
+        if(num==1){
+            mainImage.src = "laptop.avif";
+        }else if(num==2){
+            mainImage.src = "laptop1-removebg-preview.png";
+        }else if(num==3){
+            mainImage.src = "laptop2-removebg-preview.png";
+        }else if(num==4){
+            mainImage.src = "laptop3-removebg-preview.png";
+        }else if(num==5){
+            mainImage.src = "laptop4-removebg-preview.png";
+        }
+    }
+    
+</script>
     
 </body>
 </html>
